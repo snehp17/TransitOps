@@ -31,55 +31,84 @@
 }
 
 :root {
-  /* LIGHT THEME */
-  --background: #F8F6F2;
-  --background-secondary: #FCFAF7;
-  --sidebar: #FAF7F2;
-  --card: #FFFFFF;
-  --card-hover: #FFFDFB;
-  --border: #E9E2D8;
-  --divider: #F2ECE4;
+  /* DARK THEME AS DEFAULT / NOVA MINT PALETTE */
+  --background: #090B0E;
+  --background-secondary: #101419;
+  --sidebar: #0B0E13;
+  --card: #13171F;
+  --card-hover: #171C25;
+  --border: #1E2430;
+  --divider: #1A202C;
   
-  --primary: #C28A47;
-  --primary-hover: #A66D2B;
-  --primary-light: #F7E6C8;
+  --primary: #94D2BD;
+  --primary-hover: #A7E2CF;
+  --primary-light: rgba(148, 210, 189, 0.15);
   
-  --text-primary: #1F2937;
-  --text-secondary: #6B7280;
-  --text-muted: #9CA3AF;
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
   
-  --success: #2F9E44;
+  --success: #10B981;
   --warning: #F59E0B;
-  --danger: #E53935;
-  --info: #3B82F6;
+  --danger: #EF4444;
+  --info: #7DD3FC;
   
-  --shadow-color: rgba(17, 24, 39, 0.06);
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.4);
 }
 
 .dark {
-  /* DARK THEME */
-  --background: #000000;
-  --background-secondary: #0A0A0A;
-  --sidebar: #050505;
-  --card: #0F0F0F;
-  --card-hover: #141414;
-  --border: #1E1E1E;
-  --divider: #181818;
+  /* DARK THEME (NOVAMINT PALETTE) */
+  --background: #090B0E;
+  --background-secondary: #101419;
+  --sidebar: #0B0E13;
+  --card: #13171F;
+  --card-hover: #171C25;
+  --border: #1E2430;
+  --divider: #1A202C;
   
-  --primary: #D9A15B;
-  --primary-hover: #E4B978;
-  --primary-light: rgba(217, 161, 91, 0.15);
+  --primary: #94D2BD;
+  --primary-hover: #A7E2CF;
+  --primary-light: rgba(148, 210, 189, 0.15);
   
-  --text-primary: #F5F5F5;
-  --text-secondary: #C7CDD8;
-  --text-muted: #8C96A8;
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
   
-  --success: #5BCB77;
-  --warning: #FFB84C;
-  --danger: #FF5E5B;
-  --info: #64B5F6;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #7DD3FC;
   
-  --shadow-color: rgba(0, 0, 0, 0.45);
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 2px 6px -1px rgba(0, 0, 0, 0.4);
+}
+
+.light {
+  /* LIGHT THEME OPTION */
+  --background: #F3F5F8;
+  --background-secondary: #FFFFFF;
+  --sidebar: #FFFFFF;
+  --card: #FFFFFF;
+  --card-hover: #F8FAFC;
+  --border: #E2E8F0;
+  --divider: #EDF2F7;
+  
+  --primary: #0D9488;
+  --primary-hover: #0F766E;
+  --primary-light: #CCFBF1;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #0284C7;
+  
+  --shadow-color: rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -132,14 +161,14 @@ h1, h2, h3, h4, h5, h6 {
 .card {
   background-color: var(--card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  box-shadow: 0 1px 3px var(--shadow-color), 0 4px 16px rgba(0,0,0,0.06);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 .card-hover:hover {
-  border-color: var(--primary);
-  box-shadow: 0 4px 20px var(--shadow-color);
-  transform: translateY(-1px);
+  border-color: rgba(148, 210, 189, 0.3);
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
 }
 
 /* Buttons */

@@ -6,7 +6,7 @@ import { ThemeProvider } from './context/ThemeProvider'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider defaultTheme="light" storageKey="transitops-ui-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="transitops-ui-theme">
       <App />
     </ThemeProvider>
   </StrictMode>,

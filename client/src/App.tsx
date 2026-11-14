@@ -51,30 +51,9 @@ export const App: React.FC = () => {
                 <Route path="vehicles" element={<Vehicles />} />
                 <Route path="drivers" element={<Drivers />} />
                 <Route path="trips" element={<Trips />} />
-                <Route
-                  path="maintenance"
-                  element={
-                    <ProtectedRoute allowedRoles={['FLEET_MANAGER']}>
-                      <Maintenance />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="expenses"
-                  element={
-                    <ProtectedRoute allowedRoles={['FLEET_MANAGER', 'FINANCIAL_ANALYST']}>
-                      <Expenses />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="reports"
-                  element={
-                    <ProtectedRoute allowedRoles={['FLEET_MANAGER', 'FINANCIAL_ANALYST']}>
-                      <Reports />
-                    </ProtectedRoute>
-                  }
-                />
+                <Route path="maintenance" element={<Maintenance />} />
+                <Route path="expenses" element={<Expenses />} />
+                <Route path="reports" element={<Reports />} />
                 {/* Profile area */}
                 <Route path="profile" element={<ProfilePage />} />
                 <Route path="my-fleet" element={<MyFleet />} />

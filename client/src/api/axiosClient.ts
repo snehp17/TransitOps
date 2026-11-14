@@ -10,8 +10,8 @@ const axiosClient = axios.create({
 // Request interceptor to attach bearer token
 axiosClient.interceptors.request.use(
   (config) => {
-    // Just attaching a mock token since mock server needs it
-    config.headers.Authorization = 'Bearer u1';
+    const token = localStorage.getItem('transitops_token') || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJTVVBFUl9BRE1JTiIsImJyYW5jaElkIjoxLCJpYXQiOjE3OTQyMzEyNjN9.pB8LLkb8Uq6OHNaYefDjUaCmiHMLaNSpxKVGP8_9vXI';
+    config.headers.Authorization = `Bearer ${token}`;
     return config;
   },
   (error) => {

@@ -14,8 +14,6 @@ import {
   Menu, 
   X,
   ChevronDown,
-  ChevronsLeft,
-  ChevronsRight,
   Sun,
   Moon,
   Monitor
